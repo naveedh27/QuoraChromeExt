@@ -5,6 +5,7 @@ jQuery('.LoggedInSiteHeader').hide();
 jQuery('.layout_3col_left').hide();
 jQuery('.layout_3col_right').hide();
 jQuery('html').css("font-family","calibri");
+jQuery('.threaded_comments').css("font-size","16px")
 
 
 chrome.runtime.onMessage.addListener(
