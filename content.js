@@ -1,11 +1,34 @@
 
 console.log("Quora Opened.");
 
-jQuery('.LoggedInSiteHeader').hide();
-jQuery('.layout_3col_left').hide();
-jQuery('.layout_3col_right').hide();
-jQuery('html').css("font-family","calibri");
-jQuery('.threaded_comments').css("font-size","16px")
+
+	var quora = {
+		init      : function(){
+					jQuery('.layout_3col_center').width('948px');
+					jQuery('.LoggedInSiteHeader').hide();
+					jQuery('.layout_3col_left').hide();
+					jQuery('.layout_3col_right').hide();
+					jQuery('html').css("font-family","calibri");
+					jQuery('.threaded_comments').css("font-size","16px");
+					jQuery('.feed_item').css("border-bottom","0px");
+					jQuery('.ActionBar .primary_action').css('border','0px');
+					jQuery('.HomeMainFeedHeader').hide();	
+					quora.imgReplac();
+					setInterval(function(){ quora.domParser(); }, 3000);	
+					},
+		domParser : function() {		
+					jQuery('.ActionBar .primary_action').css('border','0px');
+					jQuery('.EventHeader').hide();
+					jQuery('.feed_item').css("border-bottom","0px");	
+					quora.imgReplac();					
+					},
+		imgReplac : function(){
+					jQuery('img[src$="true"]').each(function(){this.src = this.src.slice(0,-21)});
+					}			
+					
+	}
+
+	quora.init();
 
 
 chrome.runtime.onMessage.addListener(
