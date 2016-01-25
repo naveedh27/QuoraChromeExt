@@ -10,6 +10,7 @@ console.log("Quora Opened.");
 					jQuery('.threaded_comments').css("font-size","16px");
 					jQuery('.feed_item').css("border-bottom","0px");
 					jQuery('.ActionBar .primary_action').css('border','0px');
+					jQuery('.profile_photo_img').css('border-radius','0px');
 					quora.imgReplac();
 					setInterval(function(){ quora.domParser(); }, 3000);	
 					},
@@ -17,6 +18,7 @@ console.log("Quora Opened.");
 					jQuery('.ActionBar .primary_action').css('border','0px');
 					jQuery('.EventHeader').hide();
 					jQuery('.feed_item').css("border-bottom","0px");	
+					jQuery('.profile_photo_img').css('border-radius','0px');
 					quora.imgReplac();					
 					},
 		imgReplac : function(){
