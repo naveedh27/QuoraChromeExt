@@ -5,14 +5,11 @@ console.log("Quora Opened.");
 	var quora = {
 		init      : function(){
 					jQuery('.layout_3col_center').width('948px');
-					jQuery('.LoggedInSiteHeader').hide();
-					jQuery('.layout_3col_left').hide();
-					jQuery('.layout_3col_right').hide();
+					jQuery('.LoggedInSiteHeader,.layout_3col_left,.layout_3col_right,.HomeMainFeedHeader').hide();
 					jQuery('html').css("font-family","calibri");
 					jQuery('.threaded_comments').css("font-size","16px");
 					jQuery('.feed_item').css("border-bottom","0px");
 					jQuery('.ActionBar .primary_action').css('border','0px');
-					jQuery('.HomeMainFeedHeader').hide();	
 					quora.imgReplac();
 					setInterval(function(){ quora.domParser(); }, 3000);	
 					},
